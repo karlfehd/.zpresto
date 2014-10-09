@@ -12,3 +12,24 @@ fi
 
 # Customize to your needs...
 
+export EDITOR="vim"
+export SHELL="zsh"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/java/bin:/opt/java/db/bin:/opt/java/jre/bin:/usr/bin/core_perl"
+#Tmux 256 colours
+alias tmux="TERM=xterm-256color tmux"
+
+alias desktop="~/.screenlayout/three.sh"
+alias notdesktop="~/.screenlayout/one.sh"
+alias tv="~/.screenlayout/tv.sh"
+
+alias java="java -classpath ~/.path/java/junit.jar"
+alias javac="javac -classpath ~/.path/java/junit.jar"
+
+archey
+source /home/max/scripts/zaw/zaw.zsh
+
+export PATH=$PATH:/home/max/bin
+export PATH=$PATH:/home/max/.gem/ruby/2.1.0/bin
+export ECLIPSE_HOME=/usr/share/eclipse/
+
+source ~/.tmuxinator.zsh
