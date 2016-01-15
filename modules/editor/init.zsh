@@ -245,13 +245,16 @@ bindkey -M vicmd "v" edit-command-line
 bindkey -M vicmd "u" undo
 bindkey -M vicmd "$key_info[Control]R" redo
 
-if (( $+widgets[history-incremental-pattern-search-backward] )); then
-  bindkey -M vicmd "?" history-incremental-pattern-search-backward
-  bindkey -M vicmd "/" history-incremental-pattern-search-forward
-else
-  bindkey -M vicmd "?" history-incremental-search-backward
-  bindkey -M vicmd "/" history-incremental-search-forward
-fi
+#if (( $+widgets[history-incremental-pattern-search-backward] )); then
+#  bindkey -M vicmd "?" history-incremental-pattern-search-backward
+#  bindkey -M vicmd "/" history-incremental-pattern-search-forward
+#else
+#  bindkey -M vicmd "?" history-incremental-search-backward
+#  bindkey -M vicmd "/" history-incremental-search-forward
+#fi
+
+bindkey -M vicmd "n" vi-repeat-search
+bindkey -M vicmd "N" vi-rev-repeat-search
 
 #
 # Emacs and Vi Key Bindings

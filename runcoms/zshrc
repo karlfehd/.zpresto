@@ -12,9 +12,15 @@ fi
 
 # Customize to your needs...
 
+HISTFILE=~/.histfile
+HISTSIZE=10000
+SAVEHIST=5000
+unsetopt autocd beep
+bindkey -v
+
 export EDITOR="vim"
 export SHELL="zsh"
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/java/bin:/opt/java/db/bin:/opt/java/jre/bin:/usr/bin/core_perl"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin:/opt/java/bin:/opt/java/db/bin:/opt/java/jre/bin:/usr/bin/core_perl"
 #Tmux 256 colours
 alias tmux="TERM=xterm-256color tmux"
 
@@ -25,11 +31,15 @@ alias tv="~/.screenlayout/tv.sh"
 alias java="java -classpath ~/.path/java/junit.jar"
 alias javac="javac -classpath ~/.path/java/junit.jar"
 
-archey
-source /home/max/scripts/zaw/zaw.zsh
+if [ -f ~/.profile ] ; then
+   . ~/.profile
+fi
 
-export PATH=$PATH:/home/max/bin
-export PATH=$PATH:/home/max/.gem/ruby/2.1.0/bin
-export ECLIPSE_HOME=/usr/share/eclipse/
+#archey
+#source /home/max/scripts/zaw/zaw.zsh
 
-source ~/.tmuxinator.zsh
+#export PATH=$PATH:/home/max/bin
+#export PATH=$PATH:/home/max/.gem/ruby/2.1.0/bin
+#export ECLIPSE_HOME=/usr/share/eclipse/
+
+#source ~/.tmuxinator.zsh
