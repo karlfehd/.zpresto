@@ -31,17 +31,17 @@ zstyle ':prezto:load' pmodule \
   'directory' \
   'spectrum' \
   'utility' \
-  'completion' \
-  'prompt' \
-  'archive' \
-  'python' \
-  'rsync' \
   'ssh' \
-  'command-not-found' \
+  'completion' \
+  'homebrew' \
+  'osx' \
+  'ruby' \
+  'archive' \
+  'rsync' \
   'git' \
-  'pacman' \
   'syntax-highlighting' \
-  'tmux'
+  'tmux' \
+  'prompt'
 
 #
 # Editor
@@ -102,7 +102,7 @@ zstyle ':prezto:module:prompt' theme 'steeef'
 
 # Auto switch the Ruby version on directory change.
 zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
-
+zstyle ':prezto:module:ruby:info:version' format 'Ruby:%v'
 #
 # Screen
 #

@@ -27,6 +27,10 @@ function prompt_steeef_precmd {
   if (( $+functions[python-info] )); then
     python-info
   fi
+
+  if (( $+functions[ruby-info] )); then
+      ruby-info
+  fi
 }
 
 function prompt_steeef_setup {
@@ -86,8 +90,8 @@ function prompt_steeef_setup {
 
   # Define prompts.
   PROMPT="
-${_prompt_steeef_colors[3]}%n%f at ${_prompt_steeef_colors[2]}%m%f in ${_prompt_steeef_colors[5]}%~%f "'${vcs_info_msg_0_}'"
-"'$python_info[virtualenv]'"$ "
+${_prompt_steeef_colors[3]}%n%f at ${_prompt_steeef_colors[2]}%m%f in ${_prompt_steeef_colors[5]}%~%f "'${vcs_info_msg_0_}'" "'%F{196}$ruby_info[version]'"
+"'$python_info[virtualenv]'"%F{15}$ "
   RPROMPT=''
 }
 
