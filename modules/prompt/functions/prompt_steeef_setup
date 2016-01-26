@@ -49,7 +49,7 @@ function prompt_steeef_setup {
   if [[ $TERM = *256color* || $TERM = *rxvt* ]]; then
     _prompt_steeef_colors=(
       "%F{81}"  # Turquoise
-      "%F{166}" # Orange
+      "%F{214}" # Orange
       "%F{135}" # Purple
       "%F{161}" # Hotpink
       "%F{118}" # Limegreen
@@ -90,7 +90,7 @@ function prompt_steeef_setup {
 
   # Define prompts.
   PROMPT="
-${_prompt_steeef_colors[3]}%n%f at ${_prompt_steeef_colors[2]}%m%f in ${_prompt_steeef_colors[5]}%~%f "'${vcs_info_msg_0_}'" "'%F{196}$ruby_info[version]'"
+${_prompt_steeef_colors[3]}%n%f @ ${_prompt_steeef_colors[2]}%m%f in ${_prompt_steeef_colors[5]}%~%f "'${vcs_info_msg_0_}'" "'%F{160}$ruby_info[version]'"
 "'$python_info[virtualenv]'"%F{15}$ "
   RPROMPT=''
 }
