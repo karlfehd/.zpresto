@@ -16,7 +16,7 @@
 
 # Print a random, hopefully interesting, adage.
 if (( $+commands[fortune] )); then
-  fortune -s -n 80 wisdom| cowsay -f `ls /usr/local/Cellar/cowsay/3.03/share/cows/*.cow |gshuf -n 1`
+  fortune -s -n 80 computers definitions education humorists kids literature love pets science startrek wisdom| cowsay -f `ls /usr/local/Cellar/cowsay/3.03/share/cows/*.cow |gshuf -n 1`
   print
 fi
 
