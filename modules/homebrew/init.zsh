@@ -20,6 +20,6 @@ alias brewi='brew install'
 alias brewl='brew list'
 alias brews='brew search'
 alias brewu='brew upgrade'
-alias brewU='GIT_MERGE_AUTOEDIT=no brew update && brew upgrade --all && brew cleanup'
+alias brewU='GIT_MERGE_AUTOEDIT=no brew update && brew upgrade && brew cleanup'
 alias brewx='brew remove'
 
