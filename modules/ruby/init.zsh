@@ -25,9 +25,17 @@ elif (( $+commands[rbenv] )); then
 
 # Load package manager installed chruby into the shell session.
 elif (( $+commands[chruby-exec] )); then
-  source "${commands[chruby-exec]:h:h}/share/chruby/chruby.sh"
+  if (( ! $+functions[chruby] )); then
+    source "${commands[chruby-exec]:h:h}/share/chruby/chruby.sh"
+  fi
+
   if zstyle -t ':prezto:module:ruby:chruby' auto-switch; then
-    source "${commands[chruby-exec]:h:h}/share/chruby/auto.sh"
+    if (( ! $+functions[chruby_auto] )); then
+      source "${commands[chruby-exec]:h:h}/share/chruby/auto.sh"
+    fi
+
+    # If a default Ruby is set, switch to it.
+    chruby_auto
   fi
 
 # Prepend local gems bin directories to PATH.
@@ -50,6 +58,7 @@ alias rb='ruby'
 # Bundler
 if (( $+commands[bundle] )); then
   alias rbb='bundle'
+  alias rbbc='bundle clean'
   alias rbbe='bundle exec'
   alias rbbi='bundle install --path vendor/bundle'
   alias rbbl='bundle list'
@@ -63,4 +72,3 @@ if (( $+commands[bundle] )); then
     && print vendor/bundle >>! .gitignore \
     && print vendor/cache  >>! .gitignore'
 fi
-
