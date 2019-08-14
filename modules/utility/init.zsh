@@ -22,7 +22,7 @@ fi
 # Disable correction.
 alias ack='nocorrect ack'
 alias cd='nocorrect cd'
-alias cp='nocorrect cp'
+#alias cp='nocorrect cp'
 alias ebuild='nocorrect ebuild'
 alias gcc='nocorrect gcc'
 alias gist='nocorrect gist'
@@ -30,10 +30,10 @@ alias grep='nocorrect grep'
 alias heroku='nocorrect heroku'
 alias ln='nocorrect ln'
 alias man='nocorrect man'
-alias mkdir='nocorrect mkdir'
-alias mv='nocorrect mv'
+#alias mkdir='nocorrect mkdir'
+#alias mv='nocorrect mv'
 alias mysql='nocorrect mysql'
-alias rm='nocorrect rm'
+#alias rm='nocorrect rm'
 
 # Disable globbing.
 alias bower='noglob bower'
@@ -61,16 +61,16 @@ alias sa='alias | grep -i'
 alias type='type -a'
 
 # Safe ops. Ask the user before doing anything destructive.
-alias rmi="${aliases[rm]:-rm} -i"
-alias mvi="${aliases[mv]:-mv} -i"
-alias cpi="${aliases[cp]:-cp} -i"
-alias lni="${aliases[ln]:-ln} -i"
-if zstyle -T ':prezto:module:utility' safe-ops; then
-  alias rm='rmi'
-  alias mv='mvi'
-  alias cp='cpi'
-  alias ln='lni'
-fi
+#alias rmi="${aliases[rm]:-rm} -i"
+#alias mvi="${aliases[mv]:-mv} -i"
+#alias cpi="${aliases[cp]:-cp} -i"
+#alias lni="${aliases[ln]:-ln} -i"
+#if zstyle -T ':prezto:module:utility' safe-ops; then
+#  alias rm='rmi'
+#  alias mv='mvi'
+#  alias cp='cpi'
+#  alias ln='lni'
+#fi
 
 # ls
 if is-callable 'dircolors'; then
