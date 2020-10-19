@@ -15,12 +15,12 @@
 } &!
 
 # Execute code only if STDERR is bound to a TTY.
-[[ -o INTERACTIVE && -t 2 ]] && {
+#[[ -o INTERACTIVE && -t 2 ]] && {
 
   # Print a random, hopefully interesting, adage.
-  if (( $+commands[fortune] )); then
-    fortune -s -n 80 computers definitions education humorists kids literature love pets science startrek wisdom| cowsay -f stimpy
-    print
-  fi
+  #if (( $+commands[fortune] )); then
+  #  fortune -s -n 80 computers definitions education humorists kids literature love pets science startrek wisdom| cowsay -f stimpy
+  #  print
+  #fi
 
-} >&2
+#} >&2
